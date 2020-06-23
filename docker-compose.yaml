@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  unbound:
+    image: andrewbuk/unbound:latest
+    container_name: unbound
+    ports:
+      - "53:53/udp"
+      - "53:53"
+    restart: always
