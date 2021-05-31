@@ -11,11 +11,15 @@ jobs:
         name: Checkout
         uses: actions/checkout@v2
       -
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      -
         uses: docker/setup-buildx-action@v1
         id: buildx
         with:
           install: true
-      - name: login to docker hub
+      - 
+        name: login to docker hub
         run: echo "${{ secrets.DOCKER_PASS }}" | docker login -u "${{ secrets.DOCKER_USER }}" --password-stdin
       -
         name: Build
