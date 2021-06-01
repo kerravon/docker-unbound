@@ -1,6 +1,5 @@
 FROM alpine:3.13
 
-ENV VERSION 1.10.1-r0
 RUN \
 	set -e && \
 	apk add --no-cache unbound=1.13.0-r3
