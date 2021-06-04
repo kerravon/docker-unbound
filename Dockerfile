@@ -2,7 +2,7 @@ FROM alpine:3.12
 
 RUN \
 	set -e && \
-	apk add --no-cache unbound=1.13.0-r3
+	apk add --no-cache unbound=1.10.1-r0
 COPY unbound.conf /etc/unbound/
 EXPOSE 53
 EXPOSE 53/udp
